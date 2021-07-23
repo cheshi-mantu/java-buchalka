@@ -7,7 +7,8 @@ public class OperatorsAndOperands {
         String resultString = myString + myDouble;
         // + is the operator
         // myString is the first Operand
-        // myDounle is the second Operand
+        // myDouble is the second Operand
+        // myString + myDouble is the expression
 
 
     }
