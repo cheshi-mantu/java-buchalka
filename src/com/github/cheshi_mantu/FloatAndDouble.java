@@ -15,11 +15,15 @@ public class FloatAndDouble {
         System.out.println("Max double: " + doubleTypeMax);
         System.out.println("Min double: " + doubleTypeMin);
 
-        int myInt = 5;
-        float myFloat = 5.25f; // explicitly set literal value to be processed ny Java as float
+        int myInt = 5/2;
+        float myFloat = 5f/2f; // explicitly set literal value to be processed ny Java as float
         float myFloatAgain = (float) 5.25; // explicitly set float value to be processed ny Java as float using casting
-        double myDouble =5.27d; // explicitly set literal value to be processed by java as double
+        double myDouble =5d/2d; // explicitly set literal value to be processed by java as double
 
         System.out.println("Casting float to float " + (float) (myFloat*2));
+
+        System.out.println("MyInt " + myInt);
+        System.out.println("MyFloat " + myFloat);
+        System.out.println("MyDouble " + myDouble);
     }
 }
