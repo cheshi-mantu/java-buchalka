@@ -1,6 +1,6 @@
 package com.github.cheshi_mantu;
 
-public class IfStatment {
+public class IfStatement {
     public static void main(String[] args) {
 
     }
