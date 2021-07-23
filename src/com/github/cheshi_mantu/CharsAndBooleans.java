@@ -10,5 +10,14 @@ public class CharsAndBooleans {
 
         char myCopyRightUnicode = '\u00A9';
         System.out.println("My unicode copyright: " + myCopyRightUnicode);
+
+        // here goes the boolean
+
+        boolean myTrue = true;
+        boolean myFalse = false;
+
+        boolean isCutomerOverTwentyOne = true;
+
+
     }
 }
