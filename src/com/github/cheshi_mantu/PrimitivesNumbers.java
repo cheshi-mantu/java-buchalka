@@ -43,6 +43,7 @@ public class PrimitivesNumbers {
         System.out.println("Max for Long: " + myMaxLong);
 
         //casting example
+
         int myTotal = (myMinInt / 2); // works fine
 
         byte myNewByte = (byte) (myMinByte / 2);
