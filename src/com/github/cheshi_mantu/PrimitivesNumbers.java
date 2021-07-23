@@ -13,5 +13,22 @@ public class PrimitivesNumbers {
 
         System.out.println("Error will be here : " + (myMaxInt + 1));
 
+        int mytMaxINteger = 2_147_483_647;
+
+        byte myMinByte = Byte.MIN_VALUE;
+        byte myMaxByte = Byte.MAX_VALUE;
+
+        System.out.println("Min for byte: " + myMinByte);
+        System.out.println("Max for byte: " + myMaxByte);
+
+        short myMinShort = Short.MIN_VALUE;
+        short myMaxShort = Short.MAX_VALUE;
+
+        System.out.println("Min for short: " + myMinShort);
+        System.out.println("Max for short: " + myMaxShort);
+
+
+
+
     }
 }
