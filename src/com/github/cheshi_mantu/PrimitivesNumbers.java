@@ -2,7 +2,7 @@ package com.github.cheshi_mantu;
 
 public class PrimitivesNumbers {
     public static void main(String[] args) {
-        int myInt = 10000;
+        int myInt = 10000; // never used
         int myMinInt = Integer.MIN_VALUE;
         int myMaxInt = Integer.MAX_VALUE;
 
@@ -55,6 +55,14 @@ public class PrimitivesNumbers {
 
         System.out.println("myNewShort casted to short: " + myNewShort);
 
+        // challenge they say
+
+        byte byteChallenge = 120;
+        short shortChallenge = 32_111;
+        int intChallenge = 1_222_333;
+
+        long longChallengeTotal = 50_000 + 10 * (byteChallenge + shortChallenge + intChallenge);
+        System.out.println("Total in the long value:" + longChallengeTotal);
 
 
     }
