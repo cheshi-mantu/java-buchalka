@@ -28,6 +28,13 @@ public class PrimitivesNumbers {
         System.out.println("Max for short: " + myMaxShort);
 
 
+        long myMinLong = Long.MIN_VALUE;
+        long myMaxLong = Long.MAX_VALUE;
+
+        System.out.println("Min for Long: " + myMinLong);
+        System.out.println("Max for Long: " + myMaxLong);
+
+
 
 
     }
