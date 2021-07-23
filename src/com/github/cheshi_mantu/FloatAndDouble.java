@@ -33,5 +33,17 @@ public class FloatAndDouble {
         System.out.println("MyInt divided by 3 " + myInt/3);
         System.out.println("MyFloat divided by 3 " + myFloat/3f);
         System.out.println("MyDouble divided by 3 look at the precision " + myDouble/3d);
+
+        //challenge
+
+        final double POUND_TO_KG = 0.45359237;
+
+        double weightInPounds = 2.1;
+        double weightInKilograms = weightInPounds * POUND_TO_KG;
+
+        System.out.println("Weight in kilograms is " + weightInKilograms);
+
+
+
     }
 }
