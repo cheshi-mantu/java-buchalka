@@ -1,4 +1,4 @@
-package com.github.cheshi_mantu;
+package com.github.cheshi_mantu.intro;
 
 public class Hello {
 

@@ -1,4 +1,4 @@
-package com.github.cheshi_mantu;
+package com.github.cheshi_mantu.intro;
 
 public class CharsAndBooleans {
     public static void main(String[] args) {
