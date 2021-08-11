@@ -33,7 +33,7 @@ public class ToCentimeters {
             if (inches < 0 ) {
                 return -1;
             } else {
-                centimeters = calcFeetAndInchesToCentimeters(inches/12, inches % 12);
+                centimeters = calcFeetAndInchesToCentimeters((int) inches / 12, (int) inches % 12);
                 return centimeters;
             }
         }
