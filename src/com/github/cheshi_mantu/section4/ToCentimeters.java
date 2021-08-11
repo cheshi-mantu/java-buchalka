@@ -10,7 +10,7 @@ public class ToCentimeters {
         System.out.println(calcFeetAndInchesToCentimeters(24));
     }
 
-    public static double calcFeetAndInchesToCentimeters(int feet, int inches){
+    public static double calcFeetAndInchesToCentimeters(double feet, double inches){
         double inch = 2.54;
         double foot = 12 * inch;
         double centimeters;
@@ -27,7 +27,7 @@ public class ToCentimeters {
         }
     }
 
-    public static double calcFeetAndInchesToCentimeters(int inches){
+    public static double calcFeetAndInchesToCentimeters(double inches){
         double centimeters;
 
             if (inches < 0 ) {
