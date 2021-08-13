@@ -27,7 +27,7 @@ public class DurationConverter {
             hoursNum = (int) minutes / 60;
             minutesNum = (int) (minutes - hoursNum * 60);
 
-            return hoursNum + "h " + minutesNum + "m " + seconds + "s";
+            return prepend(hoursNum) + "h " + prepend(minutesNum) + "m " + prepend(seconds) + "s";
         }
 
     }
@@ -44,7 +44,7 @@ public class DurationConverter {
             remSeconds = (int) (seconds - minutesNum * 60);
 
             if (minutesNum <= 59 ) {
-                return  "0h " +  minutesNum + "m " + remSeconds + "s";
+                return  "00h " +  prepend(minutesNum) + "m " + prepend(remSeconds) + "s";
             } else {
 
                 return getDurationString(minutesNum, remSeconds);
@@ -52,5 +52,14 @@ public class DurationConverter {
 
         }
 
+    }
+    private static String prepend(int numberToPrepend) {
+        String resultString = "";
+        if (numberToPrepend < 10) {
+            resultString = "0" + numberToPrepend;
+        } else {
+            resultString = "" + numberToPrepend;
+        }
+    return resultString;
     }
 }
