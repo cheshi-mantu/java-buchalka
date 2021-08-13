@@ -1,6 +1,7 @@
 package com.github.cheshi_mantu.section4;
 
 public class DurationConverter {
+    private static final String INVALID_VALUE_MESSAGE = "Invalid value";
     public static void main(String[] args) {
         System.out.println(getDurationString(1, 1));
         System.out.println(getDurationString(60, 1));
@@ -22,7 +23,7 @@ public class DurationConverter {
         int minutesNum;
 
         if ((minutes < 0) || ((seconds < 0) || (seconds > 59))) {
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
         } else {
             hoursNum = (int) minutes / 60;
             minutesNum = (int) (minutes - hoursNum * 60);
@@ -37,7 +38,7 @@ public class DurationConverter {
         int remSeconds;
 
         if (seconds < 0 ) {
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
         } else {
 
             minutesNum = (int) seconds / 60;
