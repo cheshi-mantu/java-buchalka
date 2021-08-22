@@ -7,11 +7,16 @@ public class ForStatementExamples {
             System.out.println("Interest for " +  amountOfMoney + " and interest rate " + interestRate + " is " + String.format("%.2f",calculateInterestAmount(amountOfMoney, interestRate)));
         }
 
+        // producing 9 prime numbers
+        int count = 0;
+        for (int i = 200; i <= 1000; i++) {
 
-        for (int i = 2; i <= 200; i++) {
             if (isPrime(i)) {
+                count++;
                 System.out.println(i + " is a prime number!");
+
             }
+            if (count == 9) break;
         }
      }
     public static double calculateInterestAmount(double amount, double interestRate) {
