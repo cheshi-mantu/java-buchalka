@@ -25,13 +25,18 @@ public class WhileAndDoWhile {
 
     int number = 4;
     int finishNumber = 20;
-
+    int qtyEven = 0;
     while (number <= finishNumber) {
         number ++;
         if(!isEvenNumber(number)){
             continue;
         }
+        qtyEven++;
         System.out.println("Even number " + number);
+        if (qtyEven == 5) {
+            System.out.println("Total number of even numbers found before break is " + qtyEven);
+            break;
+        }
 
     }
 
