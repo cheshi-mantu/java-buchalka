@@ -6,9 +6,9 @@ public class EvenDigitSum {
         System.out.println("Sum of even digits is " + getEvenDigitSum(123456789));
         System.out.println("Sum of even digits is " + getEvenDigitSum(2222));
         System.out.println("Sum of even digits is " + getEvenDigitSum(223344556));
+        System.out.println("Sum of even digits is " + getEvenDigitSum(252));
     }
     public static int getEvenDigitSum(int number) {
-        int position = 0;
         int sum = 0;
         int currentNumber = number;
         int remainder = 0;
@@ -16,10 +16,9 @@ public class EvenDigitSum {
             return -1;
         } else {
             while(currentNumber > 0) {
-                position++;
                 remainder = currentNumber % 10;
                 currentNumber /= 10;
-                if (position %2 == 0) {
+                if (remainder %2 == 0) {
                     sum += remainder;
                 }
             }
