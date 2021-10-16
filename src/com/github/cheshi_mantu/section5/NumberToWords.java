@@ -20,37 +20,49 @@ Write a method called numberToWords with one int parameter named number.
 */
 public class NumberToWords {
     public static void main(String[] args) {
-        System.out.println( numberToWords(123));
-    }
+//        System.out.println(reverse(100));
+//        System.out.println(reverse(120));
+//        System.out.println(reverse(123));
+//        System.out.println(reverse(-123));
+//        System.out.println(reverse(1000));
 
-
-    public static int getDigitCount(int number){
-        int i = 1;
-        while (true) {
-            if (number / 10 > 0) {
-                i += 1;
-                number = number  / 10;
-            } else {
-                break;
-            }
-        }
-        return i;
+        System.out.println(getDigitCount(10));
+        System.out.println(getDigitCount(100));
+        System.out.println(getDigitCount(111));
+        System.out.println(getDigitCount(1234));
+        System.out.println(getDigitCount(12345));
     }
 
     public static int reverse(int number){
         int rebmun = 0;
-        int i = 0;
-        while (number > 0) {
-            if (number > 10) {
-                rebmun = (rebmun + number % 10) * 10;
-                number /= 10;
-            } else {
-                rebmun = rebmun + number;
-                number /= 10;
-            }
+
+        if (number < 0) {
+            number = - number;
         }
+
+        while (number > 0) {
+            rebmun *= 10;
+            rebmun += number % 10;
+            number /= 10;
+        }
+
         return rebmun;
     }
+
+    public static int getDigitCount(int number){
+        int i = 0;
+
+        if (number < 0) {
+            number = -number;
+        }
+
+        while (number > 0) {
+            i += 1;
+            number = number / 10;
+        }
+        return i;
+    }
+
 
     public static String numberToWords(int number){
         if (number < 0) {
