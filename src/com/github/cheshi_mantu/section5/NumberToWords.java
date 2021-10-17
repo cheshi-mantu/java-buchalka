@@ -20,24 +20,15 @@ Write a method called numberToWords with one int parameter named number.
 */
 public class NumberToWords {
     public static void main(String[] args) {
-//        System.out.println(reverse(100));
-//        System.out.println(reverse(120));
-//        System.out.println(reverse(123));
-//        System.out.println(reverse(-123));
-//        System.out.println(reverse(1000));
-
-        System.out.println(getDigitCount(10));
-        System.out.println(getDigitCount(100));
-        System.out.println(getDigitCount(111));
-        System.out.println(getDigitCount(1234));
-        System.out.println(getDigitCount(12345));
+        numberToWords(1450);
     }
 
-    public static int reverse(int number){
+    public static int reverse(int number) {
         int rebmun = 0;
-
+        boolean isNegative = false;
         if (number < 0) {
-            number = - number;
+            number = -number;
+            isNegative = true;
         }
 
         while (number > 0) {
@@ -45,15 +36,21 @@ public class NumberToWords {
             rebmun += number % 10;
             number /= 10;
         }
+        if (isNegative) {
+            return -rebmun;
+        } else {
+             return rebmun;
+        }
 
-        return rebmun;
     }
 
-    public static int getDigitCount(int number){
+    public static int getDigitCount(int number) {
         int i = 0;
-
+        if (number == 0) {
+            return 1;
+        }
         if (number < 0) {
-            number = -number;
+            return -1;
         }
 
         while (number > 0) {
@@ -64,13 +61,64 @@ public class NumberToWords {
     }
 
 
-    public static String numberToWords(int number){
+    public static void numberToWords(int number) {
         if (number < 0) {
-            return "Invalid Value";
+            System.out.println( "Invalid Value");
         } else {
-            return "" + reverse(number);
+            if (number == 0 ) {
+                System.out.println("Zero");
+
+            } else {
+
+                int numberToPrint = reverse(number);
+                int lostZeroesCount = getDigitCount(number) - getDigitCount(numberToPrint);
+                int digitToPrint = 0;
+//            System.out.println("Zeroes to print: " + lostZeroesCount);
+
+                while (numberToPrint > 0) {
+                    digitToPrint = numberToPrint % 10;
+                    numberToPrint /= 10;
+                    switch (digitToPrint) {
+                        case 0:
+                            System.out.println("Zero");
+                            break;
+                        case 1:
+                            System.out.println("One");
+                            break;
+                        case 2:
+                            System.out.println("Two");
+                            break;
+                        case 3:
+                            System.out.println("Three");
+                            break;
+                        case 4:
+                            System.out.println("Four");
+                            break;
+                        case 5:
+                            System.out.println("Five");
+                            break;
+                        case 6:
+                            System.out.println("Six");
+                            break;
+                        case 7:
+                            System.out.println("Seven");
+                            break;
+                        case 8:
+                            System.out.println("Eight");
+                            break;
+                        case 9:
+                            System.out.println("Nine");
+                            break;
+                    }
+                }
+                if(lostZeroesCount > 0) {
+                    for (int i = 0; i < lostZeroesCount; i++) {
+                        System.out.println("Zero");
+                    }
+                }
+
+            }
         }
-
     }
-
 }
+
